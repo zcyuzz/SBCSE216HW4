@@ -1,5 +1,7 @@
 package hw;
 
+import javafx.beans.binding.ObjectExpression;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
@@ -253,7 +255,7 @@ public class SparsePolynomial implements Polynomial {
      * @param p given object
      * @return{@literal true} if they are equals, and {@literal false} otherwise
      */
-    public boolean equals(Polynomial p) {
+    public boolean equals(Object p) {
         if (p == this) {
             return true;
         }

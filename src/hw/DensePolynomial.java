@@ -191,6 +191,18 @@ public class DensePolynomial implements Polynomial {
         return true;
     }
 
+    @Override
+    public boolean equals(Object p) {
+        if (p == this) {
+            return true;
+        }
+        if (!(p instanceof DensePolynomial)) return false;
+        DensePolynomial p1 = (DensePolynomial) p;
+        DensePolynomial p2 = new DensePolynomial(powercoeffArray);
+        if (p2.toString().equals(p1.toString())) return true;
+        return false;
+    }
+
     /**
      * display a polynomial in the canonical mathematica way.
      *
@@ -227,14 +239,19 @@ public class DensePolynomial implements Polynomial {
      * @param p given object
      * @return{@literal true} if they are equals, and {@literal false} otherwise
      */
-    public boolean equals(Polynomial p) {
-        if (p == this) {
-            return true;
-        }
-        if (!(p instanceof DensePolynomial)) return false;
-        DensePolynomial p1 = (DensePolynomial) p;
-        DensePolynomial p2 = new DensePolynomial(powercoeffArray);
-        if (p2.toString().equals(p1.toString())) return true;
-        return false;
-    }
+
+//    public boolean equals(Polynomial p) {
+//        System.out.println("oaisdjfoijasodf");
+//        if (p == this) {
+//            return true;
+//        }
+//        System.out.println("assaodiajid");
+//        System.out.println( p instanceof DensePolynomial);
+//        if (!(p instanceof DensePolynomial)) return false;
+//        System.out.println("pass 1");
+//        DensePolynomial p1 = (DensePolynomial) p;
+//        DensePolynomial p2 = new DensePolynomial(powercoeffArray);
+//        if (p2.toString().equals(p1.toString())) return true;
+//        return false;
+//    }
 }

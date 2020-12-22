@@ -66,4 +66,5 @@ public interface Polynomial {
      * @return {@literal true} if the class invariant holds, and {@literal false} otherwise.
      */
     boolean wellFormed();
+
 }
